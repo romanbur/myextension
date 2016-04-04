@@ -1,11 +1,11 @@
 <?php
 
-namespace Myextensions;
+namespace myextension\configs;
 
 /**
  * This is just an example.
  */
-class AutoloadExample extends \yii\base\Widget
+class Configs extends \yii\base\Widget
 {
     public function run()
     {
