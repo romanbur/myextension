@@ -1,6 +1,6 @@
 {
     "name": "myextensions/yii2-configs",
-    "version":"1.0.0",
+    "version":"1.0.1",
     "description": "Get and set configs",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
