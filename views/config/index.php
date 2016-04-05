@@ -30,12 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'default:ntext',
             'label',
             // 'type',
-            ['class' => 'yii\grid\ActionColumn'],
+
+            //['class' => 'yii\grid\ActionColumn'],
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{view}{update}',
                 'contentOptions' =>['class' => 'table_buttons'],
-            ],
+            ],                   
         ],
     ]); ?>
 </div>

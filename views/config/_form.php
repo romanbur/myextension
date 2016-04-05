@@ -14,13 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'param')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'value')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'value')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'default')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'default')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'label')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'label')->textInput(['maxlength' => true, 'disabled' => true] ) ?>
 
-    <?= $form->field($model, 'type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'type')->textInput(['maxlength' => true, 'disabled' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
