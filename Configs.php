@@ -1,5 +1,4 @@
 <?php
-
 namespace myextension\configs;
 use myextension\configs\models\Config;
 use Yii;
