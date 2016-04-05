@@ -1,14 +1,17 @@
 <?php
 
 namespace myextension\configs;
-
+use Yii;
 /**
  * This is just an example.
  */
-class Configs extends \yii\base\Widget
+class Configs extends \yii\base\Module
 {
-    public function run()
+    public $controllerNamespace = 'myextension\configs\controllers';
+    public $userClass;
+
+    public function init()
     {
-        return "Hello!";
+        parent::init();
     }
 }
