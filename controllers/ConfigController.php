@@ -61,6 +61,7 @@ class ConfigController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+    /**
     public function actionCreate()
     {
         $model = new Config();
@@ -73,6 +74,7 @@ class ConfigController extends Controller
             ]);
         }
     }
+  */
 
     /**
      * Updates an existing Config model.
@@ -99,12 +101,13 @@ class ConfigController extends Controller
      * @param string $id
      * @return mixed
      */
-    public function actionDelete($id)
+    /**    public function actionDelete($id)
     {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
-    }
+   }
+*/
 
     /**
      * Finds the Config model based on its primary key value.

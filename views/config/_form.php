@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'param')->textInput(['maxlength' => true]) ?>
+    <?php // echo $form->field($model, 'param')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'value')->textarea(['rows' => 6]) ?>
 

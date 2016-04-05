@@ -20,7 +20,6 @@ class Config extends \yii\db\ActiveRecord
     {
         return 'config';
     }
-
     /**
      * @inheritdoc
      */
@@ -34,7 +33,6 @@ class Config extends \yii\db\ActiveRecord
             [['param'], 'unique'],
         ];
     }
-
     /**
      * @inheritdoc
      */
