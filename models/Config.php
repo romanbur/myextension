@@ -1,9 +1,9 @@
 <?php
 namespace myextension\configs\models;
+use Yii;
 /**
- * This is the model class for table "{{config}}".
+ * This is the model class for table "config".
  *
- * The followings are the available columns in table '{{config}}':
  * @property string $id
  * @property string $param
  * @property string $value
@@ -11,23 +11,42 @@ namespace myextension\configs\models;
  * @property string $label
  * @property string $type
  */
-class Config extends CActiveRecord
+class Config extends \yii\db\ActiveRecord
 {
-    public static function model($className=__CLASS__)
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
     {
-        return parent::model($className);
+        return 'config';
     }
- 
-    public function tableName()
-    {
-        return '{{config}}';
-    }
- 
+
+    /**
+     * @inheritdoc
+     */
     public function rules()
     {
-        return array(
-            array('value', 'safe'),
-            array('id, param, value, label, type, default', 'safe', 'on'=>'search'),
-        );
+        return [
+            [['param', 'value', 'default', 'label', 'type'], 'required'],
+            [['value', 'default'], 'string'],
+            [['param', 'type'], 'string', 'max' => 128],
+            [['label'], 'string', 'max' => 255],
+            [['param'], 'unique'],
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'param' => 'Param',
+            'value' => 'Value',
+            'default' => 'Default',
+            'label' => 'Label',
+            'type' => 'Type',
+        ];
     }
 }
