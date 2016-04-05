@@ -15,12 +15,25 @@ class Configs extends \yii\base\Module
     {
         parent::init();
     }
-
+    
+    /**
+    * Get parameter value
+    * @param slug of param
+    * @return str
+    */
     public function get($param){
+        $return_result="";
         $model = new Config();
-          $result = $model::find()
+         $result = $model::find()
         ->where(['param' => $param])
         ->one();
-        var_dump($result);
+        
+        if($result->getAttribute('value')){
+            $return_result=$result->getAttribute('value');
+        }
+        else{
+            $return_result=$result->getAttribute('default');
+        }
+        return = $return_result;
     }
 }

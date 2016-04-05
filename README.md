@@ -26,6 +26,14 @@ Usage
 -----
 
 Once the extension is installed, simply use it in your code by  :
-
+1. In cinfig/main.php for using in views of extension. Ling will be 1. In ...cinfigs/config
+```php
+'modules' => [
+    'congigs'=>[
+            'class' => 'myextension\configs\Configs',
+        ]
+]
+```
+2. Wow
 ```php
 <?= \Myextensions\AutoloadExample::widget(); ?>```
