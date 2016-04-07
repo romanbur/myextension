@@ -26,7 +26,7 @@ Usage
 -----
 
 Once the extension is installed, simply use it in your code by  :
-1. In cinfig/main.php for using in views of extension. Ling will be 1. In ...cinfigs/config
+1. In cinfig/main.php for using in views of extension. Link will be has following form: ...cinfigs/config
 ```php
 'modules' => [
     'congigs'=>[
@@ -34,6 +34,17 @@ Once the extension is installed, simply use it in your code by  :
         ]
 ]
 ```
-2. Wow
+2. In components:
 ```php
-<?= \Myextensions\AutoloadExample::widget(); ?>```
+    components' => [
+            'congfigs' => [
+                'class' => 'myextension\configs\components\Geter',
+                'cache'=>'Wow'
+            ]
+    ]
+```
+The current component need for get access to configurate parameters in every parts of Application with following code:
+
+```php
+$congig = Yii::$app->congfigs->get('slider_count');
+```

@@ -8,7 +8,7 @@ class Geter extends \yii\base\Component
     /**
      * @var string settings model
     */
-    public $modelClass  = 'myextension\configs\controllers';
+    public $modelClass  = 'myextension\configs\models\Config';
     
     /**
     * @var Cache|string the cache object or the application component ID of the cache object.
@@ -70,7 +70,7 @@ class Geter extends \yii\base\Component
     */
     public function get($param){
         $return_result="";
-        $model = new Config();
+        $model = new $this->modelClass;
          $result = $model::find()
         ->where(['param' => $param])
         ->one();
