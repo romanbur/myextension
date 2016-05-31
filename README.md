@@ -29,9 +29,9 @@ Once the extension is installed, simply use it in your code by  :
 1. In cinfig/main.php for using in views of extension. Link will be has following form: ...cinfigs/config
 ```php
 'modules' => [
-    'congigs'=>[
+    'configs'=>[
             'class' => 'myextension\configs\Configs',
-        ]
+        ],
 ]
 ```
 2. In components:
@@ -39,10 +39,10 @@ Once the extension is installed, simply use it in your code by  :
     components' => [
             'congfigs' => [
                 'class' => 'myextension\configs\components\Geter',
-                'cache'=>'Wow'
-            ]
+                'cache'=>   120
+            ],
     ]
-```
+```Parameters: cache - Cash time in second (default - 0. If cache = 0, cache - disabled)
 The current component need for get access to configurate parameters in every parts of Application with following code:
 
 ```php
